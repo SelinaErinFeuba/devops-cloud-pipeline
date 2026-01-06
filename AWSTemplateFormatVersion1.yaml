@@ -51,6 +51,7 @@ Resources:
         systemctl enable httpd
         cd /var/www/html
         rm -f index.html
+        yum install -y git
         git clone https://github.com/SelinaErinFeuba/devops-cloud-pipeline.git
         cp devops-cloud-pipeline/webapp.html ./index.html
         
@@ -61,3 +62,4 @@ Outputs:
       - - http://
         - !GetAtt WebServer.PublicDnsName
     Description: Website URL
+
